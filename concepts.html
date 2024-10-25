@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepts - DSA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sevillana&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(18, 18, 19);
+            color: rgb(247, 245, 249);
+            font-family: "Poppins", system-ui;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(5, 114, 156);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        nav ul li a:hover {
+            color: rgb(12, 12, 20);
+            font-size: 1.04rem;
+        }
+
+        header {
+            background-color: rgb(5, 114, 156);
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Sevillana', cursive;
+            color: rgb(128, 0, 128);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: rgb(128, 0, 128);
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .content {
+            background-color: rgb(30, 30, 30);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .concept-box {
+            background-color: #f2e9e1;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .concept-box img {
+            float: right;
+            margin-left: 20px;
+            height: 70px;
+            width: 70px;
+        }
+
+        .concept-box h2 {
+            color: rgb(80, 80, 80);
+        }
+
+        .concept-box p {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Shahid's Portfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="concepts.html">Concepts</a></li>
+                <li><a href="achievements.html" class="active">Achievements</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Concepts Learnt</h1>
+            <div class="concept-box">
+                <h2>Dynamic Memory Allocation</h2>
+                <img src="dynamic-memory-allocation,png.jpg" alt="Dynamic Memory">
+                <p>In the data structures and algorithm class, I learned about the importance of dynamic memory allocation in managing memory resources efficiently. Dynamic memory allocation allows us to allocate and deallocate memory at runtime, helping us work with data structures of varying sizes. We explored key concepts like malloc() and free() in C/C++, new and delete operators in C++, and memory management strategies to prevent memory leaks and fragmentation. Understanding dynamic memory allocation is crucial for creating flexible and efficient data structures and algorithms.</p>
+            </div>
+
+            <div class="concept-box">
+                <h2>Linked Lists</h2>
+                <img src="sl.png" alt="Linked List">
+                <p>One of the fundamental data structures I studied was the linked list. I gained a deep understanding of its types, including singly linked lists, doubly linked lists, and circular linked lists. The class covered basic insertion and deletion operations, and their advantages and limitations. Learning about linked lists was essential as they serve as a foundation for many other data structures and play a crucial role in developing algorithms for tasks like searching and sorting.</p>
+            </div>
+
+            <div class="concept-box">
+                <h2>Stacks & Queue</h2>
+                <img src="sq.png" alt="Stacks & Queue">
+                <p>Stacks are last-in, first-out (LIFO) data structures, and in my data structures and algorithms class, I comprehensively studied their applications and operations. We discussed how stacks are used in function calls, expression evaluation, and backtracking algorithms. Concepts like push and pop operations, stack overflow, and the implementation of stacks using arrays or linked lists were thoroughly covered. Queues, the first-in-first-out (FIFO) data structures, were another crucial topic in the course. I learned about the practical use of queues in scenarios like task scheduling, breadth-first search algorithms, and buffer management. The class explored basic queue operations like enqueue and dequeue, as well as circular queues and priority queues. The study of queues equipped me with the knowledge needed to design efficient solutions for problems involving ordered processing.</p>
+            </div>
+
+            <div class="concept-box">
+                <h2>Trees</h2>
+                <img src="trees.png" alt="Trees">
+                <p>Trees are hierarchical data structures that I extensively studied in my data structures and algorithm class. I gained an understanding of binary trees, binary search trees, AVL trees, and B-trees, and their applications in various fields, including databases and file systems. The class covered tree traversal algorithms, balancing techniques, and the importance of maintaining ordered data. Learning about trees was instrumental in grasping advanced data structures and algorithms, as they often build upon tree-based structures.</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

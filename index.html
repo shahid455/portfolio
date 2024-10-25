@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahid - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sevillana&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(18, 18, 19);
+            color: rgb(247, 245, 249);
+            font-family: "Poppins", system-ui;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(5, 114, 156);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        nav ul li a:hover {
+            color: rgb(12, 12, 20);
+            font-size: 1.04rem;
+        }
+        .left {
+            font-size: 2rem;
+        }
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 70px 0;
+        }
+        .firstsection > div {
+            width: 30%;
+        }
+        .leftsection {
+            font-size: 2rem;
+            font-style: italic;
+            margin: 30px;
+        }
+        .rightsection img {
+            width: 80%;
+            margin: 50px 0;
+        }
+        .purple {
+            color: rgb(128, 0, 128);
+        }
+        #element {
+            color: green;
+        }
+        .button {
+            margin-top: 50px; /* Adjust this value to move the buttons further down */
+        }
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Shahid's Portfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="about.html">About</a></li>
+                <li><a href="concepts.html">Concepts</a></li> 
+                <li><a href="achievements.html" class="active">Achievements</a></li> 
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, my name is <span class="purple">Shahidul</span>
+                <div>Hasan</div>
+                <div>Welcome to my Portfolio</div>
+                <div>I am a</div>
+                <div>
+                    <span id="element"></span>
+                </div>
+                <div>Browse freely!</div>
+                <div class="button">
+                    <a href="https://github.com/shahid455" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/shahidul-hasan-81967b249/" class="btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="pg.png.jpg" alt="Portfolio Image">
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['College student', 'coder'],
+            typeSpeed: 50,
+        });
+    </script>    
+</body>
+</html>

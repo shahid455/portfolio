@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Shahid's Portfolio</title>
+    <style>
+        body {
+            background-color: rgb(18, 18, 19);
+            color: rgb(247, 245, 249);
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(5, 114, 156);
+            padding: 0 20px;
+        }
+        nav .left {
+            color: aliceblue;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 1rem;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            color: rgb(12, 12, 20);
+            font-size: 1.1rem;
+        }
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .content h1 {
+            margin-bottom: 20px;
+        }
+        .achievements {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .achievement-box {
+            background-color: rgb(30, 30, 34);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .achievement-box img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .achievement-box h3 {
+            font-size: 1.2rem;
+            color: rgb(255, 193, 7);
+        }
+        .achievement-box p {
+            color: rgb(197, 197, 199);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Shahid's Portfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="concepts.html">Concepts</a></li> 
+                <li><a href="achievements.html" class="active">Achievements</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h1>Achievements</h1>
+            <div class="achievements">
+                <div class="achievement-box">
+                    <div>
+                        <h3>AICTE Internship</h3>
+                        
+                    </div>
+                    <img src="AICTE.png.png" alt="AICTE Internship Certificate">
+                </div>
+                <div class="achievement-box">
+                    <div>
+                        <h3>Udemy course on Python</h3>
+                        
+                    </div>
+                    <img src="pythonudemy.jpg" alt="Python Certificate">
+                </div>
+                <div class="achievement-box">
+                    <div>
+                        <h3>Udemy course on OODP in C++</h3>
+                       
+                    </div>
+                    <img src="c++.jpg" alt="Udemy Certificate">
+                </div>
+                <div class="achievement-box">
+                    <div>
+                        <h3> Ideathon Project</h3>
+                        
+                    </div>
+                    <img src="ideathon.jpg.png" alt=" Project Certificate">
+                </div>
+                <div class="achievement-box">
+                    <div>
+                        <h3>SRM Hackathon</h3>
+            
+                    </div>
+                    <img src="cer.png" alt="SRM Workshop Certificate">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
