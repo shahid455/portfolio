@@ -21,7 +21,7 @@ const achievements = [
   },
   {
     id: 2,
-    title: "Cybersecurity Intern",
+    title: "Cybersecurity Virtutal Intern",
     description: "Completed a cybersecurity internship with a focus on network security and penetration testing.",
     year: "2025",
     icon: Award,
