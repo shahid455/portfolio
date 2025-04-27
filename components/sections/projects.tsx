@@ -25,7 +25,7 @@ const projects = [
     tags: ["Python", "OpenAI API", "AI", "Game Development"],
     github: "https://github.com/yourusername/ai-game-zone",
     demo: "https://ai-game-zone.demo",
-    image: "/aigamezone.jpg",
+    image: "/gamezone.jpeg",
   },
   {
     id: 3,
