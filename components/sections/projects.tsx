@@ -9,23 +9,23 @@ import Image from "next/image"
 const projects = [
   {
     id: 1,
-    title: "Intrusion Detection System (IDS)",
+    title: "Portfolio Website",
     description:
-      "A project focused on designing and developing an IDS to detect potential threats in real-time using machine learning algorithms.",
-    tags: ["Python", "Machine Learning", "Cybersecurity"],
-    github: "https://github.com/username/ids-project",
-    demo: "https://ids-demo.demo",
-    image: "/intrusion.jpg",
-  },
+      "A personal portfolio website to showcase my projects, skills, certifications, and contact details, built using React and TypeScript.",
+    tags: ["React", "TypeScript", "Portfolio", "Web Development"],
+    github: "https://github.com/shahid455/portfolio.git",
+    demo: "https://portfolio-nine-ebon-38.vercel.app/",
+    image: "/portfolio.jpg",
+  }, 
   {
     id: 2,
-    title: "Healthcare Management System",
+    title: "AI Game Zone",
     description:
-      "A full-stack project for managing healthcare operations, including patient records, billing, and doctor/nurse management.",
-    tags: ["React", "Node.js", "MySQL", "Healthcare"],
-    github: "https://github.com/username/healthcare-management",
-    demo: "https://healthcare-management.demo",
-    image: "/healthcare.jpg",
+      "An AI-powered game generator where users can create games like platformers, shooters, and puzzles by simply giving a command, using OpenAI's API.",
+    tags: ["Python", "OpenAI API", "AI", "Game Development"],
+    github: "https://github.com/yourusername/ai-game-zone",
+    demo: "https://ai-game-zone.demo",
+    image: "/aigamezone.jpg",
   },
   {
     id: 3,
