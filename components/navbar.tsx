@@ -14,7 +14,6 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -36,15 +35,27 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Clickable Brand/Logo */}
+        
+        {/* Desktop Brand */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
           onClick={() => scrollToSection("home")}
-          className="text-xl font-bold gradient-text cursor-pointer"
+          className="hidden md:block text-2xl font-bold gradient-text cursor-pointer"
         >
           Shahidul Hasan
+        </motion.div>
+
+        {/* Mobile Brand */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          onClick={() => scrollToSection("home")}
+          className="block md:hidden text-base font-bold gradient-text cursor-pointer"
+        >
+          Shahid
         </motion.div>
 
         {/* Desktop Navigation */}
