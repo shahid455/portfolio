@@ -36,15 +36,18 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Clickable Brand/Logo */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-xl font-bold gradient-text"
+          onClick={() => scrollToSection("home")}
+          className="text-xl font-bold gradient-text cursor-pointer"
         >
           Shahidul Hasan
         </motion.div>
 
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <Button variant="ghost" onClick={() => scrollToSection("home")}>
             Home
@@ -67,6 +70,7 @@ export default function Navbar() {
           <ModeToggle />
         </div>
 
+        {/* Mobile Navigation */}
         <div className="md:hidden flex items-center">
           <ModeToggle />
           <Sheet>
