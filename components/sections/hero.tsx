@@ -20,7 +20,7 @@ const HeroSection = () => {
               sequence={[
                 "Cybersecurity Engineer", 2000,
                 "Full Stack Developer", 2000,
-                "DAA Enthusiate", 2000,
+                "DAA Enthusiast", 2000,
               ]}
               wrapper="span"
               speed={50}
