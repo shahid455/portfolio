@@ -19,7 +19,7 @@ const HeroSection = () => {
             <TypeAnimation
               sequence={[
                 "Cybersecurity Engineer", 2000,
-                "Full Stack Developer", 2000,
+                "Web Developer", 2000,
                 "DAA Enthusiast", 2000,
               ]}
               wrapper="span"
