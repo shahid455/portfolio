@@ -1,7 +1,14 @@
+/* globals.css */
+
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* Tailwind base, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Custom base styles */
 @layer base {
   :root {
     --background: 240 10% 3.9%;
@@ -49,22 +56,29 @@
   }
 }
 
+/* Global styles */
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to the body */
   }
+
   html {
     scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to html */
   }
 }
 
+/* Gradient text utility */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500;
 }
 
+/* Gradient border utility */
 .gradient-border {
   position: relative;
   border-radius: var(--radius);
@@ -84,6 +98,7 @@
   pointer-events: none;
 }
 
+/* Animated gradient background */
 .animated-gradient-bg {
   background: linear-gradient(-45deg, #8b5cf6, #3b82f6, #06b6d4, #8b5cf6);
   background-size: 400% 400%;

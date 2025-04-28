@@ -43,6 +43,7 @@ export default function Navbar() {
           transition={{ delay: 0.2 }}
           onClick={() => scrollToSection("home")}
           className="hidden md:block text-2xl font-bold gradient-text cursor-pointer"
+          style={{ fontFamily: 'Montserrat, sans-serif' }}  {/* Custom Font */}
         >
           Shahidul Hasan
         </motion.div>
@@ -54,66 +55,67 @@ export default function Navbar() {
           transition={{ delay: 0.2 }}
           onClick={() => scrollToSection("home")}
           className="block md:hidden text-base font-bold gradient-text cursor-pointer"
+          style={{ fontFamily: 'Montserrat, sans-serif' }}  {/* Custom Font */}
         >
-          Shahid
+          SH
         </motion.div>
+      </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          <Button variant="ghost" onClick={() => scrollToSection("home")}>
-            Home
-          </Button>
-          <Button variant="ghost" onClick={() => scrollToSection("about")}>
-            About
-          </Button>
-          <Button variant="ghost" onClick={() => scrollToSection("projects")}>
-            Projects
-          </Button>
-          <Button variant="ghost" onClick={() => scrollToSection("skills")}>
-            Skills
-          </Button>
-          <Button variant="ghost" onClick={() => scrollToSection("achievements")}>
-            Achievements
-          </Button>
-          <Button variant="ghost" onClick={() => scrollToSection("contact")}>
-            Contact
-          </Button>
-          <ModeToggle />
-        </div>
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-6">
+        <Button variant="ghost" onClick={() => scrollToSection("home")}>
+          Home
+        </Button>
+        <Button variant="ghost" onClick={() => scrollToSection("about")}>
+          About
+        </Button>
+        <Button variant="ghost" onClick={() => scrollToSection("projects")}>
+          Projects
+        </Button>
+        <Button variant="ghost" onClick={() => scrollToSection("skills")}>
+          Skills
+        </Button>
+        <Button variant="ghost" onClick={() => scrollToSection("achievements")}>
+          Achievements
+        </Button>
+        <Button variant="ghost" onClick={() => scrollToSection("contact")}>
+          Contact
+        </Button>
+        <ModeToggle />
+      </div>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center">
-          <ModeToggle />
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="ml-2">
-                <Menu className="h-6 w-6" />
+      {/* Mobile Navigation */}
+      <div className="md:hidden flex items-center">
+        <ModeToggle />
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="ml-2">
+              <Menu className="h-6 w-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right">
+            <div className="flex flex-col space-y-4 mt-8">
+              <Button variant="ghost" onClick={() => scrollToSection("home")}>
+                Home
               </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <div className="flex flex-col space-y-4 mt-8">
-                <Button variant="ghost" onClick={() => scrollToSection("home")}>
-                  Home
-                </Button>
-                <Button variant="ghost" onClick={() => scrollToSection("about")}>
-                  About
-                </Button>
-                <Button variant="ghost" onClick={() => scrollToSection("projects")}>
-                  Projects
-                </Button>
-                <Button variant="ghost" onClick={() => scrollToSection("skills")}>
-                  Skills
-                </Button>
-                <Button variant="ghost" onClick={() => scrollToSection("achievements")}>
-                  Achievements
-                </Button>
-                <Button variant="ghost" onClick={() => scrollToSection("contact")}>
-                  Contact
-                </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+              <Button variant="ghost" onClick={() => scrollToSection("about")}>
+                About
+              </Button>
+              <Button variant="ghost" onClick={() => scrollToSection("projects")}>
+                Projects
+              </Button>
+              <Button variant="ghost" onClick={() => scrollToSection("skills")}>
+                Skills
+              </Button>
+              <Button variant="ghost" onClick={() => scrollToSection("achievements")}>
+                Achievements
+              </Button>
+              <Button variant="ghost" onClick={() => scrollToSection("contact")}>
+                Contact
+              </Button>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </motion.nav>
   )
