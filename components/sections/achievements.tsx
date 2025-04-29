@@ -23,19 +23,19 @@ const achievements = [
     id: 2,
     title: "Cybersecurity Virtutal Intern",
     description: "Completed a cybersecurity internship with a focus on network security and penetration testing.",
-    year: "2025",
+    year: "2024",
     icon: Award,
   },
   {
     id: 3,
     title: "Smart India Hackathon",
     description: "Participated in the Smart India Hackathon, contributing to innovative solutions in a competitive environment.",
-    year: "2025",
+    year: "2024",
     icon: Award,
   },
   {
     "id": 4,
-    "title": "HACKP46LU TCF",
+    "title": "HACKP46LU CTF",
     "description": "National cybersecurity hackathon, where I implemented a sophisticated IDS.",
     "year": "2025",
     "icon": "Star"

@@ -23,8 +23,8 @@ const projects = [
     description:
       "An AI-powered game generator where users can create games like platformers, shooters, and puzzles by simply giving a command, using OpenAI's API.",
     tags: ["Python", "OpenAI API", "AI", "Game Development"],
-    github: "https://github.com/yourusername/ai-game-zone",
-    demo: "https://ai-game-zone.demo",
+    github: "https://github.com/shahid455/AI-Game-Zone.git",
+    demo: "https://ai-game-zone.vercel.app/",
     image: "/gamezone.png",
   },
   {
