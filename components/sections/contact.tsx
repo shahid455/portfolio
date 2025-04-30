@@ -1,24 +1,28 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import emailjs from "emailjs-com"
+import Confetti from "react-confetti"
+import { useWindowSize } from "@uidotdev/usehooks"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Send } from "lucide-react"
+import { Github, Linkedin, Mail, Send, Instagram } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
 export default function Contact() {
   const { toast } = useToast()
+  const { width, height } = useWindowSize()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showConfetti, setShowConfetti] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -29,23 +33,26 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    emailjs.send(
-      "service_cx9nlb8",         // Your service ID
-      "template_s5pagh9",        // Your template ID
-      {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-        time: new Date().toLocaleString(),
-      },
-      "USsdrqsjvaSEeAH4g"        // Your public key
-    )  
+    emailjs
+      .send(
+        "service_cx9nlb8",
+        "template_s5pagh9",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        "USsdrqsjvaSEeAH4g"
+      )
       .then(() => {
         toast({
           title: "Message sent!",
           description: "Thank you for reaching out. I'll get back to you soon.",
         })
         setFormData({ name: "", email: "", message: "" })
+        setShowConfetti(true)
+        setTimeout(() => setShowConfetti(false), 5000)
       })
       .catch(() => {
         toast({
@@ -57,18 +64,31 @@ export default function Contact() {
   }
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 relative">
+      {showConfetti && <Confetti width={width ?? 300} height={height ?? 500} />}
+
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text"
+        className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text"
       >
         Contact Me
       </motion.h2>
 
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-center text-muted-foreground mb-12"
+      >
+        Open to internships and collaborations! Feel free to reach out.
+      </motion.p>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Form */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -82,35 +102,23 @@ export default function Contact() {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <Input
-                    placeholder="Your Name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="email"
-                    placeholder="Your Email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <Textarea
-                    placeholder="Your Message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    required
-                  />
-                </div>
+                <Input name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" required />
+                <Input
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                />
+                <Textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your Message"
+                  rows={5}
+                  required
+                />
                 <Button type="submit" className="w-full animated-gradient-bg" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <span className="flex items-center">Sending...</span>
@@ -126,6 +134,7 @@ export default function Contact() {
           </Card>
         </motion.div>
 
+        {/* Socials */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -143,7 +152,6 @@ export default function Contact() {
                   href="mailto:shahidhasan785@gmail.com"
                   className="flex items-center p-3 rounded-lg hover:bg-accent transition-colors"
                   whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <Mail className="h-5 w-5 mr-3 text-purple-500" />
                   <span>shahidhasan785@gmail.com</span>
@@ -154,7 +162,6 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex items-center p-3 rounded-lg hover:bg-accent transition-colors"
                   whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <Github className="h-5 w-5 mr-3 text-blue-500" />
                   <span>github.com/shahid455</span>
@@ -165,10 +172,19 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex items-center p-3 rounded-lg hover:bg-accent transition-colors"
                   whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <Linkedin className="h-5 w-5 mr-3 text-cyan-500" />
                   <span>linkedin.com/in/shahidulhasan</span>
+                </motion.a>
+                <motion.a
+                  href="https://www.instagram.com/_shahid.com_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center p-3 rounded-lg hover:bg-accent transition-colors"
+                  whileHover={{ x: 5 }}
+                >
+                  <Instagram className="h-5 w-5 mr-3 text-pink-500" />
+                  <span>@_shahid.com_</span>
                 </motion.a>
               </div>
             </CardContent>

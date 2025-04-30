@@ -1,49 +1,65 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Trophy, Award, Medal, Star } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Award, Star } from "lucide-react"
 import dynamic from "next/dynamic"
 import { useState, useEffect } from "react"
 
-// Import the achievements background with no SSR
-const AchievementsBackground = dynamic(() => import("../ui/achievements-background"), {
-  ssr: false,
-})
+// Import background animation without SSR
+const AchievementsBackground = dynamic(
+  () => import("../ui/achievements-background"),
+  { ssr: false }
+)
 
+// Achievements data
 const achievements = [
   {
     id: 1,
     title: "RHCSA Certification",
-    description: "Received RHCSA (Red Hat Certified System Administrator) certification, scoring 285/300 in the EX200 exam.",
+    description:
+      "Received RHCSA (Red Hat Certified System Administrator) certification, scoring 285/300 in the EX200 exam.",
     year: "2025",
     icon: Award,
+    img: "/certificate/red.jpg",
+    link: "https://rhtapps.redhat.com/verify?certId=240-202-267",
   },
   {
     id: 2,
-    title: "Cybersecurity Virtutal Intern",
-    description: "Completed a cybersecurity internship with a focus on network security and penetration testing.",
+    title: "Smart India Hackathon",
+    description:
+      "Participated in SIH, contributing to innovative solutions in a competitive national environment.",
     year: "2024",
     icon: Award,
+    img: "/certificate/SIH.jpg",
   },
   {
     id: 3,
-    title: "Smart India Hackathon",
-    description: "Participated in the Smart India Hackathon, contributing to innovative solutions in a competitive environment.",
+    title: "Cybersecurity Virtual Intern",
+    description:
+      "Completed a cybersecurity internship focused on network security and penetration testing.",
     year: "2024",
     icon: Award,
   },
   {
-    "id": 4,
-    "title": "HACKP46LU CTF",
-    "description": "National cybersecurity hackathon, where I implemented a sophisticated IDS.",
-    "year": "2025",
-    "icon": "Star"
+    id: 4,
+    title: "HACKP46LU CTF",
+    description:
+      "National cybersecurity hackathon, where I implemented a sophisticated IDS under pressure.",
+    year: "2025",
+    icon: Star,
   },
   {
     id: 5,
     title: "Intrusion Detection System (IDS) Project",
-    description: "Designed and developed an IDS as part of a university project to detect potential threats in real-time.",
+    description:
+      "Designed and developed an IDS to detect potential threats in real-time as part of my university curriculum.",
     year: "2025",
     icon: Award,
   },
@@ -81,23 +97,23 @@ export default function Achievements() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -5, scale: 1.02 }}
             >
-              <Card className="h-full gradient-border overflow-hidden">
-                {/* Card shine effect */}
+              <Card className="h-full gradient-border overflow-hidden relative">
+                {/* Shine animation */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-x-full"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-x-full pointer-events-none"
                   animate={{ translateX: ["100%", "-100%"] }}
                   transition={{
                     duration: 2,
                     ease: "easeInOut",
                     delay: index * 0.2,
-                    repeat: Number.POSITIVE_INFINITY,
+                    repeat: Infinity,
                     repeatDelay: 5,
                   }}
                 />
 
-                <CardHeader className="flex flex-row items-center gap-4">
+                <CardHeader className="flex flex-row items-center gap-4 relative z-10">
                   <div className="p-3 rounded-full bg-primary/10">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
@@ -106,8 +122,32 @@ export default function Achievements() {
                     <CardDescription>{achievement.year}</CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent>
+
+                <CardContent className="relative z-10">
                   <p className="text-muted-foreground">{achievement.description}</p>
+
+                  {/* Certificate image preview */}
+                  {achievement.img && (
+                    <div className="mt-4">
+                      <img
+                        src={achievement.img}
+                        alt={achievement.title}
+                        className="rounded-lg w-full object-contain max-h-48"
+                      />
+                    </div>
+                  )}
+
+                  {/* External link */}
+                  {achievement.link && (
+                    <a
+                      href={achievement.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary underline text-sm mt-2 inline-block"
+                    >
+                      View Credential
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>

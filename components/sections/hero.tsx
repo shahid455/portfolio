@@ -62,13 +62,14 @@ const HeroSection = () => {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-[#181818] overflow-hidden">
             <Image
-              src="/shahid.jpg" // Replace with your image path
-              alt="Profile Image"
-              layout="fill"
-              objectFit="cover"
-              priority
-            />
+             src="/shahid.jpg" // Replace with your image path
+             alt="Profile Image"
+             fill // Use 'fill' for layout replacement
+             style={{ objectFit: 'cover' }} // Use style for objectFit replacement
+            priority
+          />
           </div>
+
         </motion.div>
 
       </div>
