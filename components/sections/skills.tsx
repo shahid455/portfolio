@@ -16,7 +16,7 @@ const skillCategories = [
     id: 1,
     title: "Programming Languages",
     skills: [
-      { name: "Python", level: 90 },
+      { name: "Python", level: 85 },
       { name: "C/C++", level: 85 },
       { name: "Java", level: 80 },
       { name: "HTML/CSS", level: 75 },
@@ -27,7 +27,7 @@ const skillCategories = [
     title: "Cybersecurity",
     skills: [
       { name: "Network Security", level: 85 },
-      { name: "Penetration Testing", level: 80 },
+      { name: "Information Security", level: 80 },
       { name: "Cryptography", level: 75 },
       { name: "Security Analysis", level: 85 },
     ],
