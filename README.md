@@ -95,6 +95,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Author
 
-Shahidul Hasan - https://yourwebsite.com https://portfolio-nine-ebon-38.vercel.app/ - shahidhasan785@gmail.com
+Shahidul Hasan - https://portfolio-nine-ebon-38.vercel.app/ - shahidhasan785@gmail.com
 
 Made with ❤️
