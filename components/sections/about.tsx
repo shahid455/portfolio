@@ -26,8 +26,8 @@ export default function About() {
         >
           <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
           <p className="text-muted-foreground mb-4">
-            I'm Shahidul Hasan, a passionate Cybersecurity Engineer and DAA (Design and Analysis of Algorithms)
-            enthusiast. With a strong foundation in computer science and a keen interest in security, I develop
+            I'm Shahidul Hasan, a passionate Cybersecurity Engineer and Web Developer.
+            With a strong foundation in computer science and a keen interest in security, I develop
             solutions that are both efficient and secure.
           </p>
           <p className="text-muted-foreground">

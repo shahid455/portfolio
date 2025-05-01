@@ -22,17 +22,16 @@ const HeroSection = () => {
             Hello, I'm <br className="block sm:hidden" /> Shahidul Hasan
           </h1>
 
-          <div className="text-white text-2xl sm:text-3xl lg:text-5xl font-extrabold mb-6 h-16 flex items-center justify-center md:justify-start">
+          <div className="text-gray-800 dark:text-white text-2xl sm:text-3xl lg:text-5xl font-extrabold mb-6 h-16 flex items-center justify-center md:justify-start">
             <TypeAnimation
-              sequence={[
-                "Cybersecurity Engineer", 2000,
-                "Web Developer", 2000,
-                "DAA Enthusiast", 2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+                 sequence={[
+                   "Cybersecurity Engineer", 2000,
+                   "Web Developer", 2000,
+                    ]}
+                 wrapper="span"
+                 speed={50}
+                 repeat={Infinity}
+              />
           </div>
 
           <p className="text-gray-400 text-base sm:text-lg mb-8 max-w-xl">
