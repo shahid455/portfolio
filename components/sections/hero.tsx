@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center bg-[#121212]">
+    <section className="min-h-screen flex items-center bg-white dark:bg-[#121212] transition-colors duration-300">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8">
         
         {/* Left Content */}
@@ -46,9 +46,10 @@ const HeroSection = () => {
               </button>
             </Link>
             <Link href="/ShahidulHasanCV.pdf" download>
-              <button className="px-8 py-4 rounded-full border border-pink-500 text-white hover:bg-slate-800 transition">
-                Download CV
-              </button>
+            <button className="px-8 py-4 rounded-full border border-pink-500 text-pink-500 dark:text-white hover:bg-pink-50 dark:hover:bg-slate-800 transition">
+              Download CV
+             </button>
+
             </Link>
           </div>
         </motion.div>
