@@ -41,27 +41,29 @@ const achievements = [
   },
   {
     id: 3,
-    title: "Cybersecurity Virtual Intern",
+    title: "Fundamentals of Cryptography Certification",
     description:
-      "Completed a cybersecurity internship focused on network security and penetration testing.",
-    year: "2024",
+      "Completed an intensive course on cryptographic systems covering symmetric/asymmetric encryption, hash functions, digital signatures, and PKI through Infosys Springboard.",
+    year: "2025",
     icon: Award,
+   img: "/certificate/Crypto.jpg",
   },
   {
     id: 4,
+    title: "IDEANOVA 2024",
+    description:
+      "Actively participated in IDEANOVA, hosted by NSCC SRM and the Department of Networking and Communications, School of Computing. The event was held on 23rd October 2024 at SRMIST, Kattankulathur.",
+    year: "2024",
+    icon: Award,
+    img: "/certificate/ideathon.jpg",
+  },
+  {
+    id: 5,
     title: "HACKP46LU CTF",
     description:
       "National cybersecurity hackathon, where I implemented a sophisticated IDS under pressure.",
     year: "2025",
     icon: Star,
-  },
-  {
-    id: 5,
-    title: "Intrusion Detection System (IDS) Project",
-    description:
-      "Designed and developed an IDS to detect potential threats in real-time as part of my university curriculum.",
-    year: "2025",
-    icon: Award,
   },
 ]
 
