@@ -37,7 +37,7 @@ Welcome to my personal portfolio website! This is where I showcase my work, skil
 
 ```shellscript
 git clone https://github.com/yourusername/retro-tv-portfolio.git
-cd retro-tv-portfolio
+cd portfolio-websiteSHAHID
 ```
 
 2. Install dependencies:
