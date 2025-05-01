@@ -87,15 +87,12 @@ export default function Skills() {
                 <CardTitle>{category.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-sm font-medium">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skillValues[categoryIndex][skillIndex]}%</span>
-                    </div>
-                    <Progress value={skillValues[categoryIndex][skillIndex]} className="h-2" />
-                  </div>
-                ))}
+              {category.skills.map((skill, skillIndex) => (
+                <div key={skill.name} className="space-y-2">
+                <div className="text-sm font-medium">{skill.name}</div>
+                <Progress value={skillValues[categoryIndex][skillIndex]} className="h-2" />
+              </div>
+              ))}
               </CardContent>
             </Card>
           </motion.div>
