@@ -29,39 +29,43 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const successSound = typeof window !== "undefined" ? new Audio("/sounds/success.mp3") : null
 
-    emailjs
-      .send(
-        "service_cx9nlb8",
-        "template_s5pagh9",
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          time: new Date().toLocaleString(),
-        },
-        "USsdrqsjvaSEeAH4g"
-      )
-      .then(() => {
-        toast({
-          title: "Message sent!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        })
-        setFormData({ name: "", email: "", message: "" })
-        setShowConfetti(true)
-        setTimeout(() => setShowConfetti(false), 5000)
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setIsSubmitting(true)
+
+  emailjs
+    .send(
+      "service_cx9nlb8",
+      "template_s5pagh9",
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      },
+      "USsdrqsjvaSEeAH4g"
+    )
+    .then(() => {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
       })
-      .catch(() => {
-        toast({
-          title: "Failed to send",
-          description: "Please try again later.",
-        })
+      setFormData({ name: "", email: "", message: "" })
+      setShowConfetti(true)
+      successSound?.play()  // 🔊 Play the sound
+      setTimeout(() => setShowConfetti(false), 5000)
+    })
+    .catch(() => {
+      toast({
+        title: "Failed to send",
+        description: "Please try again later.",
       })
-      .finally(() => setIsSubmitting(false))
-  }
+    })
+    .finally(() => setIsSubmitting(false))
+}
+
 
   return (
     <div className="container mx-auto px-4 relative">
