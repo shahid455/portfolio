@@ -58,12 +58,13 @@ const achievements = [
     img: "/certificate/ideathon.jpg",
   },
   {
-    id: 5,
-    title: "HACKP46LU CTF",
+    id: 6,
+    title: "DBMS Course - Master the Fundamentals and Advanced Concepts",
     description:
-      "National cybersecurity hackathon, where I implemented a sophisticated IDS under pressure.",
+      "Successfully completed a comprehensive DBMS course covering fundamental and advanced concepts through 74 video tutorials, 16 modules, and 16 challenges on the Scaler Topics platform.",
     year: "2025",
-    icon: Star,
+    icon: Award,
+    img: "/certificate/DBMS.jpg",
   },
 ]
 
